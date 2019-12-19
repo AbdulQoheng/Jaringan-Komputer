@@ -1,0 +1,61 @@
+	
+	Diketahui suatu IP 192.168.100.0/25
+	Hitunglah jumlah subnet, host per subnet, blok subnet dan buat tabelnya
+
+	1.    Berdasarkan alamat IP berikut ini, lakukan perhitungan subnet untuk
+	   mengetahui jumlah subnet, host per subnet, blok subnet, serta alamat host
+	   dan broadcast yang valid. (kerjakan soal sesuai digit terakhir pada NIM
+	   anda) (20 point)
+		a. NIM ...0 dan...6 : 195.168.1.0 / 27
+		b. NIM ...1 dan ...7 : 195.170.45.0 / 28
+		c. NIM ...2, ...4, dan ...8 : 200.168.10.0 / 29
+		d. NIM ...3, ...5, dan ...9 : 200.170.1.0 / 30
+	2.   Anda berencana untuk melakukan subnet jaringan untuk maksimal 26 host.
+	   Subnet mask manakah yang menyediakan host sesuai keperluan dan paling
+	   sedikit menyisakan alamat yang tidak digunakan di setiap subnet? (20 point)
+	3.   Sebuah perusahaan memiliki sebuah jaringan yang memerlukan sekitar 200
+	   alamat IP per subnet. Subnet mask manakah yang terbaik untuk jaringan
+	   tersebut? (20 point)4. Termasuk tipe alamat apakah IP ini : 223.168.17.175 / 29? (20 point)
+	5.   Apa alamat subnet dari alamat IP ini: 200.10.5.68 / 28? (20 point)
+
+jawab:
+
+	IP 192.168.100.0/25
+	- IP di atas merupan IP kelas C
+	- Perhitungan yang di gunakan pada octet ke 4
+	- Subnet masknya /25 = 255.255.255.128
+	- Bilangan Binnernya adalah : 11111111.11111111.11111111.10000000
+		a. Jumlah Subnet = 2^x (x = banyaknya bineri 1 pada octet 4 yang bergaris
+		   bawah untuk kelas C). jadi jumlah subnetnya adalah 2^1 = 2
+		b. Jumlah Host per Subnet = 2^y - 2 (y = banyaknya bineri 0 pada octet 4
+		   untuk kelas C) Jumlah host dikurangi dengan 2 yang digunakan untukNetwork ID dan Broadcast.
+                   Jadi Jumlah Host per Subnetnya adalah 2^7 – 2 = 126 host.
+		c. Blok subnet = 256 – nilai octet terakhir subnet mask. Jadi Blok
+		   Subnetnya adalah 256 – 128 = 128. Jadi Blok Subnetnya = 0,128
+		Tabel Subnet kelas C
+
+		+---------------+-----------------------+
+		|Networ ID	|192.168.100.0		|
+		|Host Pertama	|192.168.100.1		|
+		|Host Terakhir	|192.168.100.254	|
+		|Bordcast	|192.168.100.255	|
+		+---------------|-----------------------+
+
+
+
+	1. NIM 18650051 IP = 195.170.45.0 / 28
+            - Subnet masknya /28 = 255.255.255.240
+		Bilangan Binnernya adalah : 11111111.11111111.11111111.11110000
+		a. Jumlah Subnet = 2^x (x = banyaknya bineri 1 pada octet 4 yang bergaris
+		   bawah untuk kelas C). jadi jumlah subnetnya adalah 2^4 = 16
+		b. Jumlah Host per Subnet = 2^y - 2 (y = banyaknya bineri 0 pada octet 4
+		   untuk kelas C) Jumlah host dikurangi dengan 2 yang digunakan untukNetwork ID dan Broadcast.
+                   Jadi Jumlah Host per Subnetnya adalah 2^4 – 2 = 14 host.
+		c. Blok subnet = 256 – nilai octet terakhir subnet mask. Jadi Blok
+		   Subnetnya adalah 256 – 240 = 16. Jadi Blok Subnetnya = 0,16,32,48,64,80,96,112,128,144,160,176,192,208,224,240
+		
+	2. 255.255.255.224 (/27)
+	3. 255.255.255.0 (/24)
+	4. Kelas C
+	5. Subnet 200.10.5.68 / 28 = 200.10.5.64 
+		
