@@ -1,0 +1,35 @@
+1. Anda membutuhkan 25 subnet dengan 300 alamat host per subnet yang
+  tersedia. Subnet mask apa yang terbaik dengan menggunakan alamat
+  jaringan kelas B? (30 point)
+2. Jawablah pertanyaan berikut berdasarkan Gambar 3.1:
+   III
+   I 
+   II
+  Gambar 3.1 Contoh Jaringan
+
+ a. Subnet mask apa yang sesuai untuk pola jaringan tersebut sehingga
+   memungkinkan adanya perkembangan jaringan di masa akan datang?
+   (20 point)
+ b. Sesuai jawaban poin a, maka berapakah jumlah host yang
+   memungkinkan ditambahkan pada masing-masing bagian (I, II, III)
+   jaringan tersebut? (20 point)
+3. Berapakah subnetmask yang tepat mengidentifikasi semua alamat IP mulai
+  172.16.96.0 hingga 172.16.127.255? (30 point)
+
+jawab: 
+
+1. Diket : Maksimal host 300, 25 subnet
+  Ip kelas B = 11111111.11111111.00000000.00000000 (255.255.0.0)
+     Ditanyakan : berapa subnet yang cocok untuk kasus ini??
+     Rumus untuk mencari banyak host
+       2^n-2 ≥ jumlah host = 2^n-2 ≥ 300
+       2^n ≥ 302
+       n = 9 ( jumlah bit 0)
+
+jadi untuk maksimal 300 host pengurangan bit nol ke kanan (bit nol menjadi hanya 9 buah)
+dari defaultnya Ip kelas B : 10111111.11111111.00000000.00000000 (255.255.0.0)
+menjadi : 11111111.11111111.11111110.00000000 (255.255.254.0)
+jawaban : C. 255.255.254.0 (/23)
+
+2. 
+
